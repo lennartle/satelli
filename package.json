@@ -1,0 +1,82 @@
+{
+  "name": "satelita",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Torrent search app",
+  "author": "Lennart Le",
+  "copyright": "© 2019",
+  "license": "ISC",
+  "main": "./src/electron.js",
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "copy-text-to-clipboard": "^2.1.0",
+    "cvlc": "^0.1.0",
+    "electron-is-dev": "^1.0.1",
+    "filesize": "^4.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^16.8.4",
+    "react-hot-loader": "^4.8.0",
+    "regedit": "^3.0.2",
+    "shortid": "^2.2.14",
+    "torrent-grabber": "github:lennartle/torrent-grabber",
+    "torrent-webserver": "github:lennartle/torrent-webserver"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "css-loader": "^2.1.1",
+    "electron": "^5.0.1",
+    "electron-builder": "^20.39.0",
+    "electron-devtools-installer": "^2.2.3",
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack && electron-builder"
+  },
+  "build": {
+    "asarUnpack": "./resources/vbs",
+    "appId": "com.example.electron-react",
+    "files": [
+      "package.json",
+      "src/index.html",
+      "src/electron.js",
+      {
+        "from": "./build/webpack",
+        "to": "src"
+      },
+      {
+        "from": "./resources/vbs",
+        "to": "src/vbs"
+      }
+    ],
+    "directories": {
+      "buildResources": "resources",
+      "output": "build/release"
+    },
+    "nsis": {
+      "perMachine": true,
+      "uninstallDisplayName": "Torrent Scope"
+    },
+    "publish": null
+  }
+}
