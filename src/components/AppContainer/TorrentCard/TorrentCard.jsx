@@ -9,8 +9,6 @@ import fs from "filesize";
 import path from "path";
 import copy from "copy-text-to-clipboard";
 
-import vlcLoader from "../../../utils/vlcLoader";
-
 import { withStyles } from "@material-ui/core/styles";
 
 import Card from "@material-ui/core/Card";
@@ -19,6 +17,8 @@ import Typography from "@material-ui/core/Typography";
 import Collapse from "@material-ui/core/Collapse";
 import Divider from "@material-ui/core/Divider";
 import LinearProgress from "@material-ui/core/LinearProgress";
+
+import vlcLoader from "../../../utils/vlcLoader";
 
 import CardHeader from "./CardHeader";
 import CardListItem from "./CardListItem";
