@@ -63,6 +63,8 @@ class TorrentCard extends Component {
       hover: false,
       magnet: undefined
     };
+
+    this.hoverTimeout = null;
   }
 
   async getMagnet() {
@@ -133,6 +135,17 @@ class TorrentCard extends Component {
     }
   }
 
+  expand(state) {
+    if (state) {
+      this.hoverTimeout = setTimeout(() => {
+        this.setState({ hover: true });
+      }, 500);
+    } else {
+      clearTimeout(this.hoverTimeout);
+      this.setState({ hover: false });
+    }
+  }
+
   render() {
     const { title, data, classes, backgroundColor } = this.props;
     const { active, fileData, hover, sessionPort } = this.state;
@@ -143,8 +156,8 @@ class TorrentCard extends Component {
           <Card
             className={classes.card}
             elevation={active ? 14 : 2}
-            onMouseEnter={() => this.setState({ hover: true })}
-            onMouseLeave={() => this.setState({ hover: false })}
+            onMouseEnter={() => this.expand(true)}
+            onMouseLeave={() => this.expand(false)}
           >
             <CardHeader
               title={title}

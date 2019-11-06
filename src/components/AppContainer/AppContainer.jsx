@@ -15,8 +15,8 @@ import TorrentGrid from "./TorrentGrid";
 const trackersToUse = [
   "1337x",
   "ThePirateBay",
-  "Nnm",
-  ["Rutracker", { login: "LennartLence", pass: "f20o5r7g10e15t6" }]
+  "Nnm"
+  // ["Rutracker", { login: "LennartLence", pass: "f20o5r7g10e15t6" }]
 ];
 
 const styles = theme => ({
