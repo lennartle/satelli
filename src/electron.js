@@ -18,8 +18,9 @@ app.on("ready", () => {
     frame: false,
     transparent: true,
     webPreferences: {
-      nodeIntegration: true
-    },
+      nodeIntegration: true,
+      devTools: true
+    }
     // resizable: false,
     // backgroundColor: "#000000"
   });
@@ -38,9 +39,8 @@ app.on("ready", () => {
         REDUX_DEVTOOLS
       } = require("electron-devtools-installer");
 
-      installExtension([REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS])
-        .then(name => console.log(`Added Extension:  ${name}`))
-        .catch(err => console.log("An error occurred: ", err));
+      installExtension([REACT_DEVELOPER_TOOLS]);
+      installExtension([REDUX_DEVTOOLS]);
     }
   });
 });

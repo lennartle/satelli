@@ -68,13 +68,14 @@
         "to": "src/vbs"
       }
     ],
+    "productName": "Satelita",
     "directories": {
       "buildResources": "resources",
       "output": "build/release"
     },
     "nsis": {
       "perMachine": true,
-      "uninstallDisplayName": "Torrent Scope"
+      "uninstallDisplayName": "Satelita"
     },
     "publish": null
   }

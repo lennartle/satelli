@@ -7,7 +7,7 @@ import { remote } from "electron";
 
 import { withStyles } from "@material-ui/core/styles";
 
-import Person from "@material-ui/icons/Settings";
+import Person from "@material-ui/icons/Looks";
 import Close from "@material-ui/icons/Close";
 import Minimize from "@material-ui/icons/Minimize";
 
@@ -33,7 +33,7 @@ class AppNavbar extends Component {
             // onClick={() => this.setState({ isSettingsOpen: !isSettingsOpen })}
           >
             <Person style={{ marginRight: "5px" }} />
-            Settings
+            Satelita
           </Button>
 
           <div className={classes.dragRegion} />

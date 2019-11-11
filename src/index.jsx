@@ -11,21 +11,21 @@ setConfig({
   showReactDomPatchNotification: false
 });
 
-const blackTheme = createMuiTheme({
-  palette: {
-    vlc: "#ff9447",
-    background: "#525252",
-    cardHeader: "#0000004d",
-    cardContent: "#5f5f5f",
-    cardActions: "#545454",
-    cardText: "#ffffff80",
-    cardListItemBackground: "#0000001c",
-    cardListItemBackgroundHover: "#3131318f"
-  },
-  typography: {
-    useNextVariants: true
-  }
-});
+// const blackTheme = createMuiTheme({
+//   palette: {
+//     vlc: "#ff9447",
+//     background: "#525252",
+//     cardHeader: "#0000004d",
+//     cardContent: "#5f5f5f",
+//     cardActions: "#545454",
+//     cardText: "#ffffff80",
+//     cardListItemBackground: "#0000001c",
+//     cardListItemBackgroundHover: "#3131318f"
+//   },
+//   typography: {
+//     useNextVariants: true
+//   }
+// });
 
 const defaultTheme = createMuiTheme({
   palette: {
