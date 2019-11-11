@@ -33,7 +33,7 @@ class AppNavbar extends Component {
             // onClick={() => this.setState({ isSettingsOpen: !isSettingsOpen })}
           >
             <Person style={{ marginRight: "5px" }} />
-            Satelita
+            Satelli
           </Button>
 
           <div className={classes.dragRegion} />

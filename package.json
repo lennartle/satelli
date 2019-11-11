@@ -1,5 +1,5 @@
 {
-  "name": "satelita",
+  "name": "satelli",
   "version": "1.0.0",
   "private": true,
   "description": "Torrent search app",
@@ -68,14 +68,14 @@
         "to": "src/vbs"
       }
     ],
-    "productName": "Satelita",
+    "productName": "Satelli",
     "directories": {
       "buildResources": "resources",
       "output": "build/release"
     },
     "nsis": {
       "perMachine": true,
-      "uninstallDisplayName": "Satelita"
+      "uninstallDisplayName": "Satelli"
     },
     "publish": null
   }
